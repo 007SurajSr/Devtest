@@ -1,3 +1,6 @@
+// Function to check it the second string can be made from the first string.
+
+
 function canMakeStr2( str1, str2)
 {
     let count = {};
@@ -17,7 +20,7 @@ function canMakeStr2( str1, str2)
 }
 
 let str1 = "surajgupta";
-let str2 = "raju";
+let str2 = "shashank";
 
 if (canMakeStr2(str1, str2))
    console.log("yes");
