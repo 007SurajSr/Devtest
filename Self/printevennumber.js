@@ -4,7 +4,7 @@ function evenNumbers()
 //  1) even numbers using 'for loop' only.
 
 {
-    for (let i = 0; i <= 10; i+=2){
+    for (let i = 0; i <= 10; i++){
      console.log(i);
     }
 }
