@@ -1,0 +1,14 @@
+<script>
+    const string = prompt('Enter name to count vowels');
+    const vowels = ['a','e','i','o','u'];
+    var count = 0;
+    const countVowels =(str) => {
+        for( let letter of str.toLowerCase()){
+            if(vowels.includes(letter)){
+                count++
+            }
+        }
+        return count;
+    }
+    console.log(countVowels(string));  
+</script>
