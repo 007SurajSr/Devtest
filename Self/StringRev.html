@@ -1,0 +1,22 @@
+<!-- <script>
+    var string = prompt("enter the value");
+    var reverseStr = (str) => {
+        var strToArray = str.split(" ");
+        var revStr = strToArray.reverse();
+        var strRverse = revStr.join("  ");
+        return strRverse;
+    }
+    console.log(reverseStr(string));
+</script> -->
+
+<script>
+    const arr = [1,2,3,4,5,6,7,8,4,2,5,6,3,1,4,9];
+    //  var count = 0;
+    // for (let i=0; i<arr.length; i++){
+    //     count += arr[i];
+    // }
+    // const uniqArr = ([...new Set(arr)]);
+    const uniqArr = arr.filter((ele,index,arr1) =>arr1.indexOf(ele)==index);
+    
+    console.log(uniqArr);
+</script>

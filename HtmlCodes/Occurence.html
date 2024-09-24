@@ -1,0 +1,12 @@
+<script>
+    var string = prompt("Enter the sentence");
+    var letter = prompt("enter the letter  ");
+    var count = 0;
+    var strLength = string.length;
+    for(let i =0; i<strLength; i++){
+        if(letter == string[i]){
+            count++;
+        }
+    }
+    console.log(` '${string}' has occurence of ${letter} = ${count} times `);
+</script>
