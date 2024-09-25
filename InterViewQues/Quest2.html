@@ -1,0 +1,149 @@
+ <script>
+function fruit () {
+    console.log(name);
+    console.log(price);
+    
+     var name = "apple";     // Hoisting is applied in this
+      let price = 20;        // in 'let' and 'const' hoisting is not applied ==> throws error.
+}
+fruit();
+</script>  
+ 
+
+ <script>
+    for( var i=0; i<3; i++){                  // loop will completed first and i will get become 3 because 'var' is 'Global Scope' variable. 
+        setTimeout(() => console.log(i),1 );  // after loop this timeFunction will run and will give three times 3 
+    }
+</script>  
+
+ <script>
+    for(let i=0; i<3; i++) {                 // 'let' is the 'Blocked Scope' variable so every setTimeOut there will be diffferent value of i
+        setTimeout(() => console.log(i), 1);
+    }
+</script>  
+
+ <script>
+    console.warn( +true);        // + will convert the string in number / convert boolen value in corresponding number e.g- true=1, false=0; 
+    console.warn(typeof +true);      // typeOf will give the Data type of assignment.
+</script>  
+
+ <Script>
+    console.log(!"anil");        // Nuggation of strin value will give false.
+    console.warn(typeof("anil")); // TypeOf of string value wil be string.
+</Script>  
+
+ <script>
+    let data = "size";
+    const  bird = {
+        size : "small",
+    };
+    console.warn(bird[data]);   // Variable binding  
+    console.warn(bird["size"]); // Data binding
+    console.warn(bird.size);    // Key binging 
+    console.warn(bird.data);    // Not any property... ==> undefined 
+</script>  
+
+ <script>
+    let c = {name : "Peter"};  // 
+    let d;                     // Both 'c' and 'd' have same memory reference and property. ==> it will get changed after new declaration.
+    d = c;                     // when value of 'c' will change then value of 'd' wil get change as well.
+    c.name = "anil";
+    console.log(d.name);
+</script>  
+
+ <script>
+    var x;          // 'var' is Global scope so it can be declared again and again. 
+    var x = 10;     // 
+    console.log(x);
+</script>  
+
+ <script>
+    var x;
+    let x = 10;     // 'let' is Blocked scope so we can not declare any same variable again with it.
+    console.log(x);
+</script>  
+
+ <script>
+    let a = 3;                  // 'a' is number in this
+        let b = new Number(3);  // 'new Number' is the object
+
+        console.log( a == b); // Value is same ==> true
+        console.log( a === b); // Data Type is different ==> false
+</script>  
+
+ <script>
+    let name;
+    nmea = {};      // Typo difference therefore is will become different variable.
+    console.log(name);  // undefined due to Hoisting.
+</script>  
+
+ <script>
+    function fruit () {
+        console.log("Woolf!");
+    }
+    fruit.name = "apple";
+                                  // If we are making any extra Key outside the function then will not change anything in it.
+    fruit();
+    console.warn(fruit())
+</script>  
+
+ <script>
+    function sum(a,b) {
+        return a + b;      // They are getting concatinating here.
+    }
+    console.log(sum(1, "2"));   
+</script>  
+
+ <script>
+    let number = 0;
+    console.log(number++);  // variable 'number' is printed first and then increament done.
+    console.log(++number);  // again increament is done and then number is increased by 2 here ==> so 2
+    console.log(number);    // variable 'number' is already increased at 2 so result ==> 2
+</script>  
+
+ <script>
+    function getAge(...args){
+        console.log(typeof args);  // In JavaScript there is nothing array, there is only object.
+    }
+    getAge(21);
+</script> 
+
+<script>
+    function getAge() {
+        'use strict';     // while using 'use strict' we need to assign any 'var' or 'let' then we can use any variable.
+        age = 21;
+        console.log(age);
+    }
+    getAge();
+</script>
+
+ <script>
+    const sum = eval('10*10+1'); // Perform any mathematical operation in its parameter.
+    console.log(sum);
+</script>
+
+ <script>
+    sessionStorage.setItem('Cool_secret', 123); // It will get removed one the tab is closed.
+</script> 
+
+<script>
+    const obj = { 1 : "A", Hello : "a" , 2 : " b" , 3 : "c" };
+
+    console.log(obj.hasOwnProperty("1"));    
+    console.log(obj.hasOwnProperty(1));      
+    
+    console.log(obj.hasOwnProperty("Hello"));    
+    console.log(obj.hasOwnProperty(Hello));      // if there is int value then we can check the property using 'string' and 'int'.      
+</script> 
+
+<script>
+    const obj1 = { a: "one", b: "two" , a: "repeat"   };    // Property of 'a' has been overwrite and but position remain same.
+    console.log(obj1); 
+</script>
+
+<script>
+    for(let i=1; i<5; i++){
+        if(i === 3) continue;
+        console.log(i);
+    }
+</script>
