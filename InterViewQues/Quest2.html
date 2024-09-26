@@ -265,11 +265,75 @@ console.log(!!"");     // "" == 0 (Because it is empty). ==> !0 == true, ==> !tr
     console.warn(data);
 </script> -->
 
-<script>
+<!-- <script>
     function getInfo(member) {
         member.name = 'Anil';
     } 
     const person = { name : 'Sarah'};   // this wil changed by reference and result will come as 'Anil'.
     getInfo(person);
     console.log(person);
-</script>
+</script> -->
+
+<!-- <script>
+    function Car () {
+        this.make = 'tata';
+        return { make : 'kia'};      // 'return' function will overwrite 'this.make' variable and it will become ==> 'kia'.
+    }
+    const myCar = new Car();
+    console.log(myCar.make);
+</script> -->
+
+<!-- <script>
+    (() => {
+        let x = ( y = 10);   // 'const' and 'let' both are Blocked variables. So we can not access it outside the blocks. ==> undefined.
+    })();
+    console.log(typeof x);
+</script> -->
+
+<!-- <script>
+    (() => {
+        let x = y = 10;
+    })();
+    // let x;
+    //  var y;   since we are not giving it any 'let' annd 'const' then it will get automatically get aligned with 'var y'. 
+
+    console.log(typeof y);
+</script> -->
+
+<!-- <script>
+    (() => {
+        let x = 10;
+    })();
+
+    (() => {
+        let x = 10;
+    })();               // 'let' is blocked scope and both let has different blocks therefore it will not give any errors.
+</script> -->
+
+<!-- <script>
+    (() => {
+        let x = y = 10;
+    })();
+
+    (() => {
+        let x = y = 20;   // 'y' get aligned with 'var' and it will become as 'var y'. Because the var is global scope so it will get updated with the value of 20.
+    })();
+
+    console.log(y);
+</script> -->
+
+<!-- <script>
+    let x = 100;    // since the 'let' is outside the scope therefore the value of x = 100;
+    (() => {
+        var x = 20;   // because the x is already aligned with 'let' variable so the 'var x' will become the blocked scope.
+    })();
+    console.log(x);
+</script> -->
+
+<!-- <script>
+    console.log(!true - true);  // '-' changes string to int ==> true = 1. And !true is false and false =0. Therefore final resule is '-1'
+</script> -->
+
+<!-- <script>
+    console.warn(true + +"10");  // "+10" will get changed into number which will be 10 and 'true' is equal to 1. So the result will be 11.
+</script> -->
