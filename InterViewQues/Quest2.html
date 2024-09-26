@@ -1,4 +1,4 @@
- <script>
+<!-- <script>
 function fruit () {
     console.log(name);
     console.log(price);
@@ -140,10 +140,136 @@ fruit();
     const obj1 = { a: "one", b: "two" , a: "repeat"   };    // Property of 'a' has been overwrite and but position remain same.
     console.log(obj1); 
 </script>
-
+ 
 <script>
     for(let i=1; i<5; i++){
-        if(i === 3) continue;
+        if(i === 3) continue;    // Because at i=3 ==> if condition get failed and not running console.log9(i).
         console.log(i);
     }
+</script> -->
+
+<!-- <script>
+    const foo = () => console.log('first');                     // Function declaration doesn't matter.  // Only function calling is matters.
+    const bar = () => setTimeout(() => console.log('second'));  // We first execute our simple function first then we will come at SetTimeout function. 
+    const baz = () => console.log('third');
+
+    bar();
+    foo();
+    baz();
+</script> -->
+
+<!-- </script>         // most imprtant to put '/' while us
+     <div> 
+        <div onclick="console.log('first click')">
+            <div onclick="console.log('second click')">
+                <button onclick="console.log('click')">
+                    Click!                               // This 'Click!' will make a bubbole, which will go bottom to top.
+                </button>
+            </div>
+        </div>
+        </div>
+</script> -->
+
+
+ <!-- <script>
+    const person = { name : 'Lydia'};
+
+    function sayHi(age) {
+        return `${this.name} is ${age}`;
+    }
+    console.log(sayHi.call(person,21));  // It will call the functin as normal function
+    console.log(sayHi.bind(person,21))   // This 'bind' functin need to call again then it will give result.
+    console.log(sayHi.bind(person,21)())
+ </script> -->
+
+ <!-- <script>
+    function sayHi() {
+        return (() => 9)();  // In this immediately invoked function, this funcion will return -- 9.
+    }
+    console.log(typeof sayHi());    // TypeOf any digit is number. so result is --- number.
+ </script> -->
+
+ <!-- <script>
+    function sayHi() {
+        return () => 0;          // This return will give us only '() =>0 '
+    }
+    console.log(typeof sayHi()); // Result of this typeof will be -- function
+</script> -->
+
+<!-- <script>
+    console.log(typeof typeof 1);  // First typeOf will give --' number' against '1'. Then next typeOf will give 'string' against 'number'
+</script> -->
+
+<!-- <script>
+    const numbers = [1,2,3];
+    numbers[6] = 11;          // We are putting value '11' at '6th' postion
+    console.log(numbers);     // Postion which do not have values will be marked as expty. e.g- empty*times of vacant spaces. 
+</script> -->
+
+<!-- <script>
+    const number = [1,2,3];
+    number[7] = number;     // This will make an infinite loop. At every 7th index same array will be placed again and so on. 
+    console.log(number);
+</script> -->
+
+<script>
+    // Question 29. Everything in Javascript is either a ...
+    //A. Primitive or object  ----- Correct
+    //B. Function or object
+    //C. Trick question! only object.
+    //D. Number or object
+</script>
+
+<!-- <script>
+console.log(!!null);   //'null' null == negative value(0), == > !0 == true, ==> !true == false
+console.log(!!"");     // "" == 0 (Because it is empty). ==> !0 == true, ==> !true == false 
+ console.log(!!1);     // '1' == true, ==> !true == false, ==> !false == true
+</script> -->
+
+<!-- <script>
+    console.warn(setInterval(() => console.log('Hi'), 1000 ));  
+    console.warn(setInterval(() => console.log('Hi'), 1000 ));
+    console.warn(setInterval(() => console.log('Hi'), 1000 ));  // Every time setInterval will give us unique value starting from 1.
+</script> -->
+
+<!-- <script>
+    console.log([..."anil"]);  // 'Spread Operato' It will split our array or string into minimal parts.
+</script> -->
+
+<!-- <script>
+    let data = 3 + 4 + '5'; // First two numbers will get add and next wil get concatinated.
+    console.log(data);
+</script> -->
+
+<!-- <script>
+    console.log(typeof 3 + 4 + '5');  //  If we have 'typeOf' function then it will operate before the numeric operations.
+</script> -->
+
+<!-- <script>
+    console.log(typeof (3 + 4 + +'5'));
+</script> -->
+
+<!-- <script>
+    console.log(typeof []); // [] == object in JavaScript
+</script> -->
+
+<!-- <script>
+    console.log([]==[]);  // ==> Result is false because both of the array will have different memory locations.
+</script> -->
+
+<!-- <script>
+    let data = [1,2,3].map(num => {
+        if(typeof num === 'number') return;  // Empty 'return' will give us only 'undefined'.
+        return num * 2;
+    });
+    console.warn(data);
+</script> -->
+
+<script>
+    function getInfo(member) {
+        member.name = 'Anil';
+    } 
+    const person = { name : 'Sarah'};   // this wil changed by reference and result will come as 'Anil'.
+    getInfo(person);
+    console.log(person);
 </script>
